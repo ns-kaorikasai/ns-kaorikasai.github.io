@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords" content="新幹線,時間地図,日本経済,半世紀,日本列島,一極集中,景気指標,東海道新幹線,リニア中央新幹線">
+    <meta name="description" content="新幹線が登場して半世紀。機能やデザインは時代とともに進化を続け、高速化と路線の拡大を通じて日本国内の一極集中と日本経済をけん引しました。新幹線が日本にもたらした変化を、デジタル技術を駆使して3つの視点からビジュアルに振り返ります。">
+    <meta property="og:url" content="http://www.nikkei.com/edit/interactive/rd/50shinkansen/">
+    <meta property="og:site_name" content="日本経済新聞">
+    <meta property="og:title" content="日本を変えた新幹線　〜ビジュアルで振り返る半世紀〜">
+    <meta property="og:description" content="新幹線の進化と日本にもたらした変化を、デジタル技術を駆使して3つの視点からビジュアルに振り返る。">
+    <meta property="og:type" content="article">
+    <link rel="canonical" href="http://www.nikkei.com/edit/interactive/rd/50shinkansen/chapter3.html">
+    <link rel="stylesheet" href="../../template2/css/style.css">
+    <!--[if lt IE 9]>
+    <script src="../../template2/js/html5shiv-printshiv.min.js"></script>
+    <script src="../../template2/js/selectivizr.min.js"></script>
+    <![endif]-->
+
+    <link rel="stylesheet" href="css/style.css">
+    <title>日本を変えた新幹線　〜ビジュアルで振り返る半世紀〜：日本経済新聞</title>
+  </head>
+  <body class="chapter3">
+    <header role="banner" class="pageHeader">
+      <div class="pageHeader_main">
+        <h1 class="pageHeader_main_title"><span class="pageHeader_main_title_label">日本を変えた新幹線　〜ビジュアルで振り返る半世紀〜</span><a href="/" class="pageHeader_main_title_logo"><!--[if !IE]>--><img src="../../template2/img/logo_nikkei_ja_white.svg" alt="日本経済新聞"><!--<![endif]--><!--[if IE]><img src="../../template2/img/logo_nikkei_ja_white.png" alt="日本経済新聞"><![endif]--></a></h1>
+        <div class="pageHeader_main_menu">
+          <ul class="pageHeader_main_menu_list">
+            <li class="pageHeader_main_menu_list_item pageHeader_main_menu_list_item-facebook"><a id="fbcount" href="https://www.facebook.com/sharer/sharer.php"><span class="pageHeader_main_menu_list_item_count">0</span></a></li>
+            <li class="pageHeader_main_menu_list_item pageHeader_main_menu_list_item-twitter"><a id="ttcount" href="http://twitter.com/share" data-hash="#nikkei　#新幹線" data-counturl="http://www.nikkei.com/edit/interactive/rd/50shinkansen/"><span class="pageHeader_main_menu_list_item_count">0</span></a></li>
+            <li class="pageHeader_main_menu_list_item pageHeader_main_menu_list_item-submenu"><a id="submenu" href="#"><span class="pageHeader_main_menu_list_item_label">メニュー</span></a></li>
+          </ul>
+        </div>
+      </div>
+      <nav role="navigation" class="pageHeader_sub">
+        <ul class="pageHeader_sub_menu">
+          <li class="pageHeader_sub_menu_item"><a href="./">オープニング</a></li>
+          <li class="pageHeader_sub_menu_item"><a href="chapter1.html">縮んだ列島</a></li>
+          <li class="pageHeader_sub_menu_item"><a href="chapter2.html">機能とデザイン</a></li>
+          <li class="pageHeader_sub_menu_item"><a href="chapter3.html" class="active">景気指標</a></li>
+          <li class="pageHeader_sub_menu_item"><a href="epilogue.html">エピローグ</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main role="main" class="pageBody pageBody-fluid">
+      <div class="pageBody_loading">
+        <p><span class="loading-label">Loading...</span></p>
+      </div><!--[if lte IE 8]>
+      <p class="attention">一部のブラウザーやスマートフォン、タブレットでは画面が正しく表示されなかったり、動きが制限されることがあります。</p><![endif]-->
+      <section class="chapter3_content">
+        <header class="pageBody_header pageBody_header_fixed chapter3_header">
+          <div class="pageBody_header_inner">
+            <h1 class="pageBody_header_title">乗客数<span class="small">は</span>景気指標</h1>
+            <p class="pageBody_header_lead">強まった日本経済との相関関係</p>
+          </div>
+          <p class="pageBody_scroll"><a href="#content">スクロール</a></p>
+        </header>
+        <section id="content" class="pageBody_container chapter3_container">
+          <div class="pageBody_container_inner chapter3_container_inner">
+            <div class="chapter3_section chapter3_chart">
+              <h1 class="pageBody_title">輸送人員量と経済指標の関連性</h1>
+              <div id="changeChartData" class="btn-group">
+                <button type="button" id="data2" class="btn active">日本の実質国内総生産（GDP）</button>
+                <button type="button" id="data4" class="btn">円相場</button>
+                <button type="button" id="data3" class="btn">日経平均株価</button>
+                <button type="button" disabled="true" id="chart1-2-b4" class="btn btn-zoom-in">10年毎にズーム</button>
+              </div>
+              <div class="chapter3_chart_canvas">
+                <div id="chapter3_chart_canvas"></div>
+                <button id="chart1-2-b2" type="button" disabled="true" class="btn btn-previous"><</button>
+                <button id="chart1-2-b3" type="button" disabled="true" class="btn btn-next">></button>
+              </div>
+              <p class="pageBody_annotation">輸送人員：輸送人員はJR東海資料による、1万人未満は切り捨て<br>GDP：内閣府「国民経済計算」を基に作成。1964～79年度は1990年基準、1980～93年度は2000年基準、1994～2013年度は2005年基準<br>円相場：東京市場、スポット、17時時点<br>日経平均株価：225種 日次終値の年度平均値</p>
+            </div>
+            <section class="chapter3_section chapter3_past">
+              <h2 class="chapter3_past_title">過去50年の主要な出来事</h2>
+              <ul class="btn-group btn-group-justified">
+                <li><a href="#past1964" data-toggle="modal" data-target="#past1964" class="btn">1964年</a></li>
+                <li><a href="#past1973" data-toggle="modal" data-target="#past1973" class="btn">1973年</a></li>
+                <li><a href="#past1985" data-toggle="modal" data-target="#past1985" class="btn">1985年</a></li>
+                <li><a href="#past1991" data-toggle="modal" data-target="#past1991" class="btn">1991年</a></li>
+                <li><a href="#past1997" data-toggle="modal" data-target="#past1997" class="btn">1997年</a></li>
+                <li><a href="#past2000" data-toggle="modal" data-target="#past2000" class="btn">2000年頃</a></li>
+                <li><a href="#past2005" data-toggle="modal" data-target="#past2005" class="btn">2005年</a></li>
+                <li><a href="#past2008" data-toggle="modal" data-target="#past2008" class="btn">2008年</a></li>
+                <li><a href="#past2011" data-toggle="modal" data-target="#past2011" class="btn">2011年</a></li>
+              </ul>
+              <div id="past1964" tabindex="-1" role="dialog" aria-hidden="true" class="modal fade">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <button type="button" data-dismiss="modal" class="close">
+                        <div aria-hidden="true" class="span">&times;</div>
+                        <div class="span sr-only">Close</div>
+                      </button>
+                      <h3 class="modal-title"><img src="img/chapter3_ttl_past_1964.png" alt="1964年 オリンピック景気"></h3>
+                    </div>
+                    <div class="modal-body">
+                      <p>新幹線開業に続く東京五輪開催で国内は好景気に沸いた。戦後の復興期を経て日本が高度経済成長の波に乗ったことを実感させる年となった。</p>
+                      <p><img src="img/chapter3_img_past_1964.jpg" alt=""></p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div id="past1973" tabindex="-1" role="dialog" aria-hidden="true" class="modal fade">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <button type="button" data-dismiss="modal" class="close">
+                        <div aria-hidden="true" class="span">&times;</div>
+                        <div class="span sr-only">Close</div>
+                      </button>
+                      <h3 class="modal-title"><img src="img/chapter3_ttl_past_1973.png" alt="1973年 第一次石油ショック"></h3>
+                    </div>
+                    <div class="modal-body">
+                      <p>産油国の原油価格引き上げ決定をきっかけにインフレーションが加速。政府の総需要抑制政策で消費・投資が低迷し、74年には戦後初のマイナス成長となった。</p>
+                      <p><img src="img/chapter3_img_past_1973.jpg" alt=""></p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div id="past1985" tabindex="-1" role="dialog" aria-hidden="true" class="modal fade">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <button type="button" data-dismiss="modal" class="close">
+                        <div aria-hidden="true" class="span">&times;</div>
+                        <div class="span sr-only">Close</div>
+                      </button>
+                      <h3 class="modal-title"><img src="img/chapter3_ttl_past_1985.png" alt="1985年 プラザ合意"></h3>
+                    </div>
+                    <div class="modal-body">
+                      <p>ニューヨークで開いた先進五カ国蔵相会議（G5）は協調してドル高を是正することで合意。各中央銀行が自己判断で自国市場に介入する原則になった。</p>
+                      <p><img src="img/chapter3_img_past_1985.jpg" alt=""></p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div id="past1991" tabindex="-1" role="dialog" aria-hidden="true" class="modal fade">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <button type="button" data-dismiss="modal" class="close">
+                        <div aria-hidden="true" class="span">&times;</div>
+                        <div class="span sr-only">Close</div>
+                      </button>
+                      <h3 class="modal-title"><img src="img/chapter3_ttl_past_1991.png" alt="1991年 バブル経済の崩壊"></h3>
+                    </div>
+                    <div class="modal-body">
+                      <p>80年代後半に株価や地価が高騰するバブル経済に突入したが、90年代の株価暴落などで崩壊し日本経済の「失われた20年」が始まった。</p>
+                      <p><img src="img/chapter3_img_past_1991.jpg" alt=""></p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div id="past1997" tabindex="-1" role="dialog" aria-hidden="true" class="modal fade">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <button type="button" data-dismiss="modal" class="close">
+                        <div aria-hidden="true" class="span">&times;</div>
+                        <div class="span sr-only">Close</div>
+                      </button>
+                      <h3 class="modal-title"><img src="img/chapter3_ttl_past_1997.png" alt="1997年 金融機関破綻相次ぐ"></h3>
+                    </div>
+                    <div class="modal-body">
+                      <p>山一証券が負債総額は約3兆円を抱えて倒産するなど金融機関の経営破綻が相次いで表面化した。</p>
+                      <p><img src="img/chapter3_img_past_1997.jpg" alt=""></p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div id="past2000" tabindex="-1" role="dialog" aria-hidden="true" class="modal fade">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <button type="button" data-dismiss="modal" class="close">
+                        <div aria-hidden="true" class="span">&times;</div>
+                        <div class="span sr-only">Close</div>
+                      </button>
+                      <h3 class="modal-title"><img src="img/chapter3_ttl_past_2000.png" alt="2000年頃 IT景気"></h3>
+                    </div>
+                    <div class="modal-body">
+                      <p>米国初の情報技術（IT）産業の拡大が日本に波及したが、過剰投資などが影響し2000年代初頭に一転してIT不況に陥った。</p>
+                      <p><img src="img/chapter3_img_past_2000.jpg" alt=""></p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div id="past2005" tabindex="-1" role="dialog" aria-hidden="true" class="modal fade">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <button type="button" data-dismiss="modal" class="close">
+                        <div aria-hidden="true" class="span">&times;</div>
+                        <div class="span sr-only">Close</div>
+                      </button>
+                      <h3 class="modal-title"><img src="img/chapter3_ttl_past_2005.png" alt="2005年 郵政民営化"></h3>
+                    </div>
+                    <div class="modal-body">
+                      <p>「聖域なき構造改革」を掲げた小泉純一郎首相のもとで政府機構の改革が推進された。</p>
+                      <p><img src="img/chapter3_img_past_2005.jpg" alt=""></p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div id="past2008" tabindex="-1" role="dialog" aria-hidden="true" class="modal fade">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <button type="button" data-dismiss="modal" class="close">
+                        <div aria-hidden="true" class="span">&times;</div>
+                        <div class="span sr-only">Close</div>
+                      </button>
+                      <h3 class="modal-title"><img src="img/chapter3_ttl_past_2008.png" alt="2008年 リーマン・ショック"></h3>
+                    </div>
+                    <div class="modal-body">
+                      <p>米大手証券会社リーマン・ブラザーズが経営破綻したのをきっかけに、世界中に金融・経済危機が連鎖的に広がった。</p>
+                      <p><img src="img/chapter3_img_past_2008.jpg" alt=""></p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div id="past2011" tabindex="-1" role="dialog" aria-hidden="true" class="modal fade">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <button type="button" data-dismiss="modal" class="close">
+                        <div aria-hidden="true" class="span">&times;</div>
+                        <div class="span sr-only">Close</div>
+                      </button>
+                      <h3 class="modal-title"><img src="img/chapter3_ttl_past_2011.png" alt="2011年 東日本大震災"></h3>
+                    </div>
+                    <div class="modal-body">
+                      <p>宮城県沖を震源とするマグニチュード9の地震が発生。太平洋沿岸を巨大な津波が襲い、死者・行方不明者は1万8000人を超えた。</p>
+                      <p><img src="img/chapter3_img_past_2011.jpg" alt=""></p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+            <section class="pageBody_section chapter3_section">
+              <h2 class="pageBody_title">乗客数は景気指標～強まった日本経済との関係</h2>
+              <p>　東海道新幹線は半世紀で20億kmを疾走し、延べ55億人を運んだ。1964年の東京五輪、70年の大阪万博、75年の山陽新幹線の全線開業などのイベント経て、旅客需要は順調に伸びた。65～70年のいざなぎ景気を演出する基盤を担い、高度成長期の日本人の足元を支えた。</p>
+              <p>　64年度に1101万人だった年間の輸送人員は右肩上がりに伸び、10年足らずで1億人（93年度）を突破。ただ、77年度から86年度までは9000万人台で低迷した。日本国有鉄道（国鉄）が巨額の赤字を垂れ流し、設備投資が滞ったことが需要の足踏みあせた。あこがれの「夢の超特急」は社会に定着する一方、徐々に輝きを失っていった。</p>
+              <p>　国鉄が分割民営化して以降、新型車両の投入を柱にして輸送力を増強していくことで輸送人員は再び成長カーブを描く。東海旅客鉄道（JR東海）は91年、新幹線に関する鉄道施設（車両除く）を5兆956億円で取得した。バブル経済が終わりを迎える中、新幹線関連の債務の金利は最大6％超に設定された。</p>
+              <p>　東海道新幹線の旅客需要が景気の波に左右されやすく、他の景気指標と強い相関関係があると言われてきた。国内総生産（GDP）、日経平均株価、為替の水準と見比べると、80年代以降は特にGDPと似た曲線を描く。</p>
+              <p>　交通経済が専門の一橋大学の山内弘隆教授は「鉄道の乗客数は沿線人口に影響を受けるのが一般的だが、東海道新幹線は経済活動との関連性が特に強い」と分析する。</p>
+              <p>　東海道新幹線は出張の足として欠かせず、ビジネス利用が6～7割を占めるといわれる。2001年に携帯電話やパソコンからチケットを予約できる「エクスプレス予約」が始まり、07年から無線LANサービスの利用が可能になった。今や新幹線は「高速移動するオフィス」だ。</p>
+              <p>　日本経済との強い相関関係は新幹線にとって弱みにもなる。最近でも08年のリーマン・ショック、11年の東日本大震災の影響を色濃く受け、乗客数は落ち込んだ。</p>
+              <p>　日本経済が低成長時代に突入する中、新幹線が新たな需要を創出するのは容易でない。JR東海が自己資金だけでリニア新幹線の建設に挑むのも、付加価値を高め経営面での現状打破を狙っているからだろう。ただ、利用者の大半は東海道新幹線からの転換需要とみられるだけに「計画全体で見た採算性は厳しいかもしれない」と一橋大の山内教授はみる。</p>
+            </section>
+            <p class="pageBody_pager"><a href="epilogue.html"><span>エピローグ<span class="small">へ</span></span></a></p>
+          </div>
+        </section>
+      </section>
+    </main>
+    <footer role="contentinfo" class="pageFooter">
+      <p><a href="/"><small><!--[if !IE]>--><img src="../../template2/img/logo_nikkei_ja_black.svg" alt="日本経済新聞" class="pageFooter_logo pageFooter_logo-ja"><!--<![endif]--><!--[if IE]><img src="../../template2/img/logo_nikkei_ja_black.png" alt="日本経済新聞" class="pageFooter_logo pageFooter_logo-ja"><![endif]--><span class="pageFooter_separate">|</span><!--[if !IE]>--><img src="../../template2/img/logo_nikkei_en_black.svg" alt="NIKKEI" class="pageFooter_logo pageFooter_logo-en"><!--<![endif]--><!--[if IE]><img src="../../template2/img/logo_nikkei_en_black.png" alt="NIKKEI" class="pageFooter_logo pageFooter_logo-en"><![endif]--><span class="pageFooter_copyright">&copy; All Rights Reserved.</span></small></a></p>
+    </footer>
+    <script src="../../template2/js/script.min.js"></script>
+    <script src="js/script.min.js"></script>
+    <script src="js/script.chapter3.min.js"></script>
+    <script src="//www.google.com/jsapi"></script>
+    <script>
+      var jsonData = $.ajax({
+       url: "js/chapter3.chart.json",
+       dataType:"json",
+       async: false
+       }).responseText;
+       
+      var options = {
+      height: '100%',
+      chartArea: {width: '72%', height: '80%'},
+      series: {
+       0: {targetAxisIndex: 0},
+       1: {targetAxisIndex: 1}
+      },
+      animation:{
+       duration: 1000,
+       easing: 'in'
+      },
+      hAxis: {viewWindow: {min:0, max:50}},
+      legend: { position: 'top', alignment: 'end' },
+      }
+      
+      function drawExample12() {
+      
+      var MAX = 50;
+      
+      // Create our data table out of JSON data loaded from server.
+      var data = new google.visualization.DataTable(jsonData);
+      var view = new google.visualization.DataView(data);
+      view.setColumns([0, 1, 2, 5, 6]);
+      
+      // Instantiate and draw our chart, passing in some options.
+      var chart = new google.visualization.LineChart($("#chapter3_chart_canvas").get(0));
+      var data2Button = document.getElementById('data2');
+      var data3Button = document.getElementById('data3');
+      var data4Button = document.getElementById('data4');
+      var prevButton = document.getElementById('chart1-2-b2');
+      var nextButton = document.getElementById('chart1-2-b3');
+      var changeZoomButton = document.getElementById('chart1-2-b4');
+      function drawChart12() {
+      // Disabling the button while the chart is drawing.
+      // button.disabled = true;
+       data2Button.disabled = true;
+       data3Button.disabled = true;
+       data4Button.disabled = true;
+       changeZoomButton.disabled = true;
+       prevButton.disabled = true;
+       nextButton.disabled = true;
+       
+       google.visualization.events.addListener(chart, 'ready',
+        function() {
+        data2Button.disabled = false;
+        data3Button.disabled = false;
+        data4Button.disabled = false;
+        prevButton.disabled = options.hAxis.viewWindow.min <= 0;
+        nextButton.disabled = options.hAxis.viewWindow.max >= MAX;
+        changeZoomButton.disabled = false;
+        });
+        
+       chart.draw(view, options); // グラフ描画
+      }
+      
+      function xxx(object){
+       $('#changeChartData .btn').removeClass("active");
+       object.addClass('active');
+      }
+      
+      data2Button.onclick = function() {
+       var object = $(this)
+       view.setColumns([0, 1, 2, 5, 6]);
+       drawChart12();
+       xxx(object);
+      }
+      
+      data3Button.onclick = function() {
+       var object = $(this)
+       view.setColumns([0, 1, 3, 5, 6]);
+       drawChart12();
+       xxx(object);
+      }
+      
+      data4Button.onclick = function() {
+       var object = $(this)
+       var options = {
+       height: '100%',
+       chartArea: {width: '72%', height: '80%'},
+       series: {
+        0: {targetAxisIndex: 0},
+        1: {targetAxisIndex: 1}
+       },
+       animation:{
+        duration: 1000,
+        easing: 'out'
+       },
+       vAxes:{
+        0: {
+        direction: 1
+        },
+        1: {
+        direction: -1
+        }
+       },
+       hAxis: {viewWindow: {min:0, max:50}},
+       // legend: { position: 'top', alignment: 'end', textStyle: {color: 'fff'} },
+       legend: { position: 'top', alignment: 'end' },
+       // backgroundColor: {'stroke':'#fff','strokeWidth':1,'fill':'transparent'}
+       vAxes:{
+        0: {
+        direction: 1
+        },
+        1: {
+        direction: -1
+        }
+       }
+       }
+      options["vAxes"] = {
+       0: {
+       direction: 1
+       },
+       1: {
+       direction: -1
+       }
+      }
+      
+       view.setColumns([0, 1, 4, 5, 6]);
+       chart.draw(view, options);
+       xxx(object);
+       
+       delete options["vAxes"];
+      }
+      
+      prevButton.onclick = function() {
+       options.hAxis.viewWindow.min -= 5;
+       options.hAxis.viewWindow.max -= 5;
+       drawChart12();
+      }
+      nextButton.onclick = function() {
+       options.hAxis.viewWindow.min += 5;
+       options.hAxis.viewWindow.max += 5;
+       drawChart12();
+      }
+      
+      var zoomed = true;
+      changeZoomButton.onclick = function() {
+       if (zoomed) {
+        options.hAxis.viewWindow.min = 0;
+        options.hAxis.viewWindow.max = 10;
+        $(this).removeClass('btn-zoom-in').addClass('btn-zoom-out').text("50年指標に戻る");
+        //-console.log(this);
+       } else {
+        options.hAxis.viewWindow.min = 0;
+        options.hAxis.viewWindow.max = MAX;
+        $(this).removeClass('btn-zoom-out').addClass('btn-zoom-in').text("10年毎にズーム");
+       }
+       zoomed = !zoomed;
+       drawChart12();
+      }
+      drawChart12();
+      }
+      
+      function init() {
+       drawExample12();
+      // drawExample20();
+      }
+      
+      google.load('visualization', '1.1', {packages: ['corechart']});
+      google.setOnLoadCallback(init);
+      
+    </script>
+    <!--SiteCatalyst code-->
+    <script>
+      var now = new Date();
+      var pageName = location.href;
+      var channel = "DS";
+      var server = location.host;
+      var pageType = "";
+      var prop1="DSli−コンフィデンシャル"; 
+      var prop2="DSli−コンフィデンシャルースペシャルリポート"; 
+      var prop3 = "[インタラクティブ]日本を変えた新幹線　〜ビジュアルで振り返る半世紀〜";
+      var prop4 = "";
+      var prop6 = now.getHours();
+      var prop12 = "";
+      var prop14 = "";
+      var prop16 = "";
+      var prop20 = "";
+      var prop21 = "";
+      var prop22 = ""; 
+      var prop23 = "";
+      var prop24 = ""; 
+      var prop25 = "";
+      var prop26 = "";
+      var prop27 = "";
+      var prop28 = "1";
+      var prop30 = "3";
+      var prop29 = "1";
+      if(prop39 === undefined){
+      var prop39 = "4";
+      } else {
+      prop39 = "4";
+      }
+      var sKeyword = "";
+    </script>
+    <!--
+    SiteCatalyst code version: H.9.
+    Copyright 1997-2007 Omniture, Inc. More info available at
+    http://www.omniture.com
+    -->
+    <script>
+      (function(c1,c2){function lsc(scn,func){var sc=document.createElement('script');sc.type='text/javascript';sc.src=scn;if(func){if(window.ActiveXObject){sc.onreadystatechange=function(){var sState=sc.readyState;if((sState=='complete')||(sState=='loaded')){func()}}}else{sc.onload=function(){func()}}}document.getElementsByTagName("head")[0].appendChild(sc)}function lcdds(){lsc(c1,lcds)}function lcds(){lsc(c2)}lcdds()})
+      ("http://parts.nikkei.com/parts/SC/newsx/s_codeDSnewsx.js","http://parts.nikkei.com/parts/SC/s_cDS.js");
+    </script>
+    <script>if(navigator.appVersion.indexOf('MSIE')>=0)document.write(unescape('%3C')+'\!-'+'-')</script>
+    <noscript><a href="http://www.omniture.com" title="Web Analytics"><img src="http://nikkei.112.2o7.net/b/ss/nikkeicojpdsmstallprod,nikkeicojpdsmstdsprod,nikkeicojpdsnewsxprod/1/H.9--NS/0" height="1" width="1" border="0" alt="" /></a></noscript>
+    <!--/DO NOT REMOVE/-->
+    <!-- End SiteCatalyst code version: H.9.-->
+    <!--/SiteCatalyst code-->
+  </body>
+</html>
